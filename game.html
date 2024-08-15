@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .board {
+            display: none;
+            /* Hide the board initially */
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #f0f0f0;
+            border: none;
+            outline: none;
+        }
+
+        .cell:hover {
+            background-color: #e0e0e0;
+        }
+
+        .winner,
+        .current-player {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .start-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .start-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="current-player" id="currentPlayer"></div>
+    <div class="board" id="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+    </div>
+    <div class="winner" id="winner"></div>
+    <button class="start-button" id="startButton">Start Game</button>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
